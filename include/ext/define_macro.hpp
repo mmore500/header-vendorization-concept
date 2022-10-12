@@ -1,0 +1,6 @@
+#ifndef EXT_DEFINE_MACRO_HPP
+#define EXT_DEFINE_MACRO_HPP
+
+#define EXT_MACRO 42
+
+#endif // #ifndef EXT_DEFINE_MACRO_HPP
