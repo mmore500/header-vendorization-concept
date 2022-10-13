@@ -17,12 +17,12 @@ int main() {
 
   std::cout << mylib::do_return_macro() << '\n';
 
-  #ifdef LIB_THIS_1ST_EXT_MACRO
-  std::cout << "LIB_THIS_1ST_EXT_MACRO" << '\n';
+  #ifdef MYLIB_THIS_1ST_EXT_MACRO
+  std::cout << "MYLIB_THIS_1ST_EXT_MACRO" << '\n';
   #endif
 
-  #ifdef LIB_THAT_1ST_EXT_MACRO
-  std::cout << "LIB_THAT_1ST_EXT_MACRO" << '\n';
+  #ifdef MYLIB_THAT_1ST_EXT_MACRO
+  std::cout << "MYLIB_THAT_1ST_EXT_MACRO" << '\n';
   #endif
 
 }
