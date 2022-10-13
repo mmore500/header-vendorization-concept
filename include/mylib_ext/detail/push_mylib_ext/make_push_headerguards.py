@@ -10,11 +10,11 @@ for headerguard in [
 ]:
 
     content += textwrap.dedent(f"""\
-        #pragma push_macro("{ headerguard }")
-        #ifndef MYLIB_{ headerguard }_
-        #undef { headerguard }
-        #endif // #ifndef MYLIB_{ headerguard }_
 
+        #pragma push_macro("{ headerguard }")
+        #ifndef MYLIB_{ headerguard }_HEADERGUARD
+        #undef { headerguard }
+        #endif // #ifndef MYLIB_{ headerguard }_HEADERGUARD
     """)
 
 with open(f"push_headerguards.hh", "w") as f:

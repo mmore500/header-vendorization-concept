@@ -7,6 +7,7 @@ for macro in [
     "EXT_MACRO",
 ]:
     content += textwrap.dedent(f"""\
+
         #ifdef {macro}
 
           #ifndef MYLIB_THIS_HAS_{macro}
