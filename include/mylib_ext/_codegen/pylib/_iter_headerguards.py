@@ -7,7 +7,7 @@ def iter_headerguards() -> typing.Iterator[str]:
     for header_path in header_paths:
         with open(header_path) as header_file:
             yield from re.findall(
-                r"^#ifndef ([A-Z_]+_HPP)$",
+                r"^#ifndef ([A-Z0-9_]+_HPP)$",
                 header_file.read(),
                 re.MULTILINE,
             )
