@@ -4,7 +4,7 @@ import textwrap
 
 from pylib import iter_macros
 
-content = ""
+content = "#ifdef MYLIB_VENDORIZE_EXT\n"
 for macro in iter_macros():
     content += textwrap.dedent(f"""\
 
@@ -32,6 +32,10 @@ for macro in iter_macros():
 
         #endif // #ifdef {macro}
     """)
+
+content += "\n"
+content += "#endif // #ifdef MYLIB_VENDORIZE_EXT"
+content += "\n"
 
 with open(f"detail/pop_macros.hh", "w") as f:
     f.write(content)

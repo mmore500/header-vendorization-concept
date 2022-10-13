@@ -1,3 +1,4 @@
+#define MYLIB_VENDORIZE_EXT
 #include <iostream>
 
 #include "include/mylib/do_print_macro.hpp"

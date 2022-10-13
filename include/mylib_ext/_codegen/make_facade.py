@@ -22,11 +22,19 @@ def setup_one_facade(header_path: str) -> None:
         #ifndef {header_guard}
         #define {header_guard}
 
+        #ifdef MYLIB_VENDORIZE_EXT
         #include "detail/push_mylib_ext.hh"
+        #endif // #ifdef MYLIB_VENDORIZE_EXT
 
         #include "../../third-party/ext/{header_path}"
 
+        #ifndef MYLIB_VENDORIZE_EXT
+        namespace mylib_ext = ext;
+        #endif // #ifndef MYLIB_VENDORIZE_EXT
+
+        #ifdef MYLIB_VENDORIZE_EXT
         #include "detail/pop_mylib_ext.hh"
+        #endif // #ifdef MYLIB_VENDORIZE_EXT
 
         #endif // #ifndef {header_guard}
     """)

@@ -1,11 +1,10 @@
-#define MYLIB_VENDORIZE_EXT
 #include <iostream>
-
-#include "ext/print_macro.hpp"
 
 #include "include/mylib/do_print_macro.hpp"
 #include "include/mylib/do_return_macro.hpp"
 #include "include/mylib/do_use_macro.hpp"
+
+// #include "ext/print_macro.hpp"
 
 int main() {
 

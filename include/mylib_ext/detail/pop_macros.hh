@@ -1,3 +1,4 @@
+#ifdef MYLIB_VENDORIZE_EXT
 
 #ifdef EXT_MACRO
 
@@ -22,3 +23,5 @@
   #endif
 
 #endif // #ifdef EXT_MACRO
+
+#endif // #ifdef MYLIB_VENDORIZE_EXT

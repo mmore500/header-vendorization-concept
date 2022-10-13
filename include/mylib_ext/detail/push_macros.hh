@@ -1,4 +1,5 @@
 
+#ifdef MYLIB_VENDORIZE_EXT
 #ifdef EXT_MACRO
 
   #ifndef MYLIB_EXTERNAL_HAS_EXT_MACRO
@@ -36,3 +37,5 @@
   #endif // #ifdef MYLIB_INTERNAL_HAS_EXT_MACRO
 
 #endif // #ifdef EXT_MACRO
+
+#endif // #ifdef MYLIB_VENDORIZE_EXT

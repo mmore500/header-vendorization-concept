@@ -4,7 +4,7 @@ import textwrap
 
 from pylib import iter_headerguards
 
-content = ""
+content = "#ifdef MYLIB_VENDORIZE_EXT\n"
 for headerguard in iter_headerguards():
 
 
@@ -15,6 +15,10 @@ for headerguard in iter_headerguards():
         #undef { headerguard }
         #endif // #ifndef MYLIB_{ headerguard }_HEADERGUARD
     """)
+
+content += "\n"
+content += "#endif // #ifdef MYLIB_VENDORIZE_EXT"
+content += "\n"
 
 with open(f"detail/push_headerguards.hh", "w") as f:
     f.write(content)
