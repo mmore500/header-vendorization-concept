@@ -1,8 +1,13 @@
+from glob import glob
+import re
 import typing
 
 def iter_headerguards() -> typing.Iterator[str]:
-    yield from  [
-        "EXT_DEFINE_MACRO_HPP",
-        "EXT_PRINT_MACRO_HPP",
-        "EXT_RETURN_MACRO_HPP",
-    ]
+    header_paths = glob("../../third-party/ext/**/*.hpp", recursive=True)
+    for header_path in header_paths:
+        with open(header_path) as header_file:
+            yield from re.findall(
+                r"^#ifndef ([A-Z_]+_HPP)$",
+                header_file.read(),
+                re.MULTILINE,
+            )
