@@ -40,5 +40,5 @@ for macro in [
         #endif // #ifdef {macro}
     """)
 
-with open(f"push_macros.hh", "w") as f:
+with open(f"detail/push_macros.hh", "w") as f:
     f.write(content)

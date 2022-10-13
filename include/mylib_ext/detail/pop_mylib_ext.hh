@@ -1,4 +1,4 @@
 #undef ext
 
-#include "pop_mylib_ext/pop_headerguards.hh"
-#include "pop_mylib_ext/pop_macros.hh"
+#include "pop_headerguards.hh"
+#include "pop_macros.hh"

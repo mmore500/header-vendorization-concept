@@ -17,5 +17,5 @@ for headerguard in [
         #endif // #ifndef MYLIB_{ headerguard }_HEADERGUARD
     """)
 
-with open(f"push_headerguards.hh", "w") as f:
+with open(f"detail/push_headerguards.hh", "w") as f:
     f.write(content)

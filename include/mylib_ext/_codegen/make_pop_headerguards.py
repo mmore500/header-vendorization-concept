@@ -17,5 +17,5 @@ for headerguard in [
         #pragma pop_macro("{headerguard}")
     """)
 
-with open(f"pop_headerguards.hh", "w") as f:
+with open(f"detail/pop_headerguards.hh", "w") as f:
     f.write(content)
