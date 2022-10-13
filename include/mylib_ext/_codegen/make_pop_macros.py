@@ -10,22 +10,22 @@ for macro in iter_macros():
 
         #ifdef {macro}
 
-          #ifndef MYLIB_THIS_HAS_{macro}
-            #define MYLIB_THIS_HAS_{macro}
+          #ifndef MYLIB_INTERNAL_HAS_{macro}
+            #define MYLIB_INTERNAL_HAS_{macro}
 
-            #ifdef MYLIB_THAT_1ST_{macro}
+            #ifdef MYLIB_EXTERNAL_1ST_{macro}
               #pragma pop_macro("{macro}")
             #endif
 
-            #ifndef MYLIB_THAT_HAS_{macro}
-              #ifndef MYLIB_THIS_1ST_{macro}
-                #define MYLIB_THIS_1ST_{macro}
+            #ifndef MYLIB_EXTERNAL_HAS_{macro}
+              #ifndef MYLIB_INTERNAL_1ST_{macro}
+                #define MYLIB_INTERNAL_1ST_{macro}
               #endif
             #endif
 
-          #endif // #ifndef MYLIB_THIS_HAS_{macro}
+          #endif // #ifndef MYLIB_INTERNAL_HAS_{macro}
 
-          #ifndef MYLIB_THAT_HAS_{macro}
+          #ifndef MYLIB_EXTERNAL_HAS_{macro}
             #pragma push_macro("{macro}")
             #undef {macro}
           #endif
