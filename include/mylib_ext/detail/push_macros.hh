@@ -19,7 +19,9 @@
     #ifndef MYLIB_SUPPRESS_OUTSIDE_MACRO_WARNINGS
       #pragma message(\
         "EXT_MACRO defined first outside vendorized header,"\
-        " try changing inclusion order"\
+        " so outside definition will be used inside vendorized header"\
+        " on subsequent includes of the vendorized header"\
+        " --- if causes problems, try changing header include order"\
       )
     #endif
   #endif
