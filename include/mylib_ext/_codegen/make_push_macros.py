@@ -2,10 +2,10 @@
 
 import textwrap
 
+from pylib import iter_macros
+
 content = ""
-for macro in [
-    "EXT_MACRO",
-]:
+for macro in iter_macros():
     content += textwrap.dedent(f"""\
 
         #ifdef {macro}

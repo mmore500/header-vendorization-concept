@@ -2,12 +2,10 @@
 
 import textwrap
 
+from pylib import iter_headerguards
+
 content = ""
-for headerguard in [
-    "EXT_DEFINE_MACRO_HPP",
-    "EXT_PRINT_MACRO_HPP",
-    "EXT_RETURN_MACRO_HPP",
-]:
+for headerguard in iter_headerguards():
 
     content += textwrap.dedent(f"""\
 
