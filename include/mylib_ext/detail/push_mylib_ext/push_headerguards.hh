@@ -1,0 +1,14 @@
+#pragma push_macro("EXT_DEFINE_MACRO_HPP")
+#ifndef MYLIB_EXT_DEFINE_MACRO_HPP_
+#undef EXT_DEFINE_MACRO_HPP
+#endif // #ifndef MYLIB_EXT_DEFINE_MACRO_HPP
+
+#pragma push_macro("EXT_PRINT_MACRO_HPP")
+#ifndef MYLIB_EXT_PRINT_MACRO_HPP_
+#undef EXT_PRINT_MACRO_HPP
+#endif // #ifndef MYLIB_EXT_PRINT_MACRO_HPP
+
+#pragma push_macro("EXT_RETURN_MACRO_HPP")
+#ifndef MYLIB_EXT_RETURN_MACRO_HPP_
+#undef EXT_RETURN_MACRO_HPP
+#endif // #ifndef MYLIB_EXT_RETURN_MACRO_HPP
