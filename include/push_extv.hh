@@ -29,6 +29,15 @@
     #undef EXT_MACRO
   #endif
 
+  #if defined(LIB_THIS_HAS_EXT_MACRO) && defined(LIB_THAT_1ST_EXT_MACRO)
+    #ifndef LIB_SUPPRESS_OUTSIDE_MACRO_WARNINGS
+      #pragma message( \
+        "EXT_MACRO defined first outside vendorized header," \
+        " try changing inclusion order" \
+      )
+    #endif
+  #endif
+
 #else // #ifdef EXT_MACRO
 
   #ifdef LIB_THIS_HAS_EXT_MACRO
