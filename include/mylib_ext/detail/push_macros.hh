@@ -16,13 +16,16 @@
   #if defined(\
     MYLIB_INTERNAL_HAS_EXT_MACRO) && defined(MYLIB_EXTERNAL_1ST_EXT_MACRO\
   )
-    #ifndef MYLIB_SUPPRESS_OUTSIDE_MACRO_WARNINGS
+    #ifndef MYLIB_SUPPRESS_MACRO_INSEEP_WARNINGS
+    #ifndef MYLIB_EXT_MACRO_INSEEP_WARNING
+      #define MYLIB_EXT_MACRO_INSEEP_WARNING
       #pragma message(\
         "EXT_MACRO defined first outside vendorized header,"\
         " so outside definition will be used inside vendorized header"\
         " on subsequent includes of the vendorized header"\
         " --- if causes problems, try changing header include order"\
       )
+    #endif
     #endif
   #endif
 

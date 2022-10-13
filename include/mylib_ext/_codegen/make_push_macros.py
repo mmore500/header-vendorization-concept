@@ -25,13 +25,16 @@ for macro in iter_macros():
           #if defined(\\
             MYLIB_INTERNAL_HAS_{macro}) && defined(MYLIB_EXTERNAL_1ST_{macro}\\
           )
-            #ifndef MYLIB_SUPPRESS_OUTSIDE_MACRO_WARNINGS
+            #ifndef MYLIB_SUPPRESS_MACRO_INSEEP_WARNINGS
+            #ifndef MYLIB_{macro}_INSEEP_WARNING
+              #define MYLIB_{macro}_INSEEP_WARNING
               #pragma message(\\
                 "{macro} defined first outside vendorized header,"\\
                 " so outside definition will be used inside vendorized header"\\
                 " on subsequent includes of the vendorized header"\\
                 " --- if causes problems, try changing header include order"\\
               )
+            #endif
             #endif
           #endif
 
